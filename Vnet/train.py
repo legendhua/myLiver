@@ -117,7 +117,7 @@ for epoch in range(Epoch):
             #plot_loss(train_loss, val_loss)
     # 每十个个epoch保存一次模型参数
     if (epoch+1) % 5 is 0:
-        torch.save(net.state_dict(), os.path.join(model_path,'net{}-{:.3f}.pth'.format((epoch+71), loss.item())))
+        torch.save(net.state_dict(), os.path.join(model_path,'net{}-{:.3f}.pth'.format(epoch, loss.item())))
     
 log.close()
 
